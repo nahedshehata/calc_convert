@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">calc_convert</string>
+    <string name="title">Number Convert</string>
+    <string name="btnName">Convert</string>
+</resources>
