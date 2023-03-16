@@ -3,4 +3,8 @@
     <string name="title">Number Convert</string>
     <string name="btnName">Convert</string>
     <string name="enter_number">Enter Number</string>
+    <string name="Title">Convert Number</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="result">ٌٌٌResult</string>
 </resources>
