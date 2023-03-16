@@ -4,24 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F2F2"
+
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/title"
-        android:textAlignment="center"
-        android:textColor="#2b83ff"
-        android:textSize="30sp"
-        android:textStyle="bold"
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/img"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/num"
@@ -29,13 +25,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
-        android:hint="Enter Number"
+        android:hint="@string/enter_number"
         app:endIconMode="clear_text"
+        android:background="@drawable/color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView">
+        app:layout_constraintTop_toBottomOf="@id/image">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/number"
@@ -115,7 +111,7 @@
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="#2b83ff"
+        android:backgroundTint="#6200ee"
         android:textAllCaps="false"
         android:text="@string/btnName"
         android:textColor="@color/white"
@@ -130,7 +126,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
 
         android:layout_width="match_parent"
-        android:layout_height="370sp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"

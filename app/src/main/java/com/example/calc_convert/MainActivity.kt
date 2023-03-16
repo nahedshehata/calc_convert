@@ -11,11 +11,11 @@ import android.widget.Button
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
-    lateinit var dropMenuFrom: AutoCompleteTextView
-    lateinit var toDropMenu: AutoCompleteTextView
-    lateinit var textEditRes: TextInputEditText
-    lateinit var buttonConvert: Button
-    lateinit var textInputEditText: TextInputEditText
+    private lateinit var dropMenuFrom: AutoCompleteTextView
+    private lateinit var toDropMenu: AutoCompleteTextView
+    private lateinit var textEditRes: TextInputEditText
+    private lateinit var buttonConvert: Button
+    private lateinit var textInputEditText: TextInputEditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,44 +56,44 @@ class MainActivity : AppCompatActivity() {
 
             //************************** logic Code ******************************
             if (start == "Binary" && end == "Decimal") {
-                var output = Integer.parseInt(textInputEditText.text.toString(), 2)
+                val output = Integer.parseInt(textInputEditText.text.toString(), 2)
 
                 textEditRes.setText(output.toString())
             } else if (start == "Binary" && end == "Octal") {
 
-                var output = Integer.parseInt(textInputEditText.text.toString(), 2)
+                val output = Integer.parseInt(textInputEditText.text.toString(), 2)
 
                 val out = Integer.toOctalString(output)
                 textEditRes.setText(out.toString())
 
             } else if (start == "Binary" && end == "Hexadecimal") {
 
-                var output = Integer.parseInt(textInputEditText.text.toString(), 2)
+                val output = Integer.parseInt(textInputEditText.text.toString(), 2)
                 val ans = Integer.toHexString(output.toInt())
                 textEditRes.setText(ans.toString().uppercase())
 
 
             } else if (start == "Decimal" && end == "Binary") {
 
-                var input = textInputEditText.text.toString().toInt()
-                var output = Integer.toBinaryString(input)
+                val input = textInputEditText.text.toString().toInt()
+                val output = Integer.toBinaryString(input)
                 textEditRes.setText(output.toString())
 
 
             } else if (start == "Decimal" && end == "Octal") {
 
-                var input = textInputEditText.text.toString().toInt()
-                var output = Integer.toOctalString(input)
+                val input = textInputEditText.text.toString().toInt()
+                val output = Integer.toOctalString(input)
                 textEditRes.setText(output.toString())
             } else if (start == "Decimal" && end == "Hexadecimal") {
-                var input = textInputEditText.text.toString().toInt()
-                var output = Integer.toHexString(input)
+                val input = textInputEditText.text.toString().toInt()
+                val output = Integer.toHexString(input)
                 textEditRes.setText(output.toString())
 
             } else if (start == "Octal" && end == "Binary") {
                 val ans = textInputEditText.text.toString()
                 val decimal = Integer.parseInt(ans, 8)
-                var output = Integer.toBinaryString(decimal)
+                val output = Integer.toBinaryString(decimal)
                 textEditRes.setText(output.toString())
             } else if (start == "Octal" && end == "Decimal") {
                 val ans = textInputEditText.text.toString()
@@ -111,19 +111,19 @@ class MainActivity : AppCompatActivity() {
                 textEditRes.setText(ans)
             } else if (start == "Hexadecimal" && end == "Binary") {
                 val ans = textInputEditText.text.toString()
-                var decimal = Integer.parseInt(ans, 16)
-                var hex = Integer.toBinaryString(decimal)
+                val decimal = Integer.parseInt(ans, 16)
+                val hex = Integer.toBinaryString(decimal)
                 textEditRes.setText(hex.toString())
 
             } else if (start == "Hexadecimal" && end == "Decimal") {
                 val ans = textInputEditText.text.toString()
-                var hex = Integer.parseInt(ans)
+                val hex = Integer.parseInt(ans)
                 textEditRes.setText(hex.toString())
 
             } else if (start == "Hexadecimal" && end == "Octal") {
                 val ans = textInputEditText.text.toString()
-                var decimal = Integer.parseInt(ans, 16)
-                var hex = Integer.toOctalString(decimal)
+                val decimal = Integer.parseInt(ans, 16)
+                val hex = Integer.toOctalString(decimal)
                 textEditRes.setText(hex.toString())
 
             }
